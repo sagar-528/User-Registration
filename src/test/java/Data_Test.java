@@ -22,4 +22,12 @@ public class Data_Test
         boolean result = validate.lastName("Gupta");
         Assert.assertEquals(true, result );
     }
+
+    // Test case for validating email Id.
+    @Test
+    public void ProvideEmailId_WhenProper_ReturnTrue()
+    {
+        boolean result = validate.emailId("Gupta.sagar528@gmail.com");
+        Assert.assertEquals(true, result );
+    }
 }
