@@ -36,5 +36,14 @@ public class UserValidate {
         Matcher matcher = p.matcher(mNumber);
         return matcher.matches();
     }
+
+    //Method for Password Case.
+    public boolean password8Character(String password)
+    {
+        String patternpassword8Character= "^.{8,}$";
+        Pattern p = Pattern.compile(patternpassword8Character);
+        Matcher matcher = p.matcher(password);
+        return matcher.matches();
+    }
 }
 

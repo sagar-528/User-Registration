@@ -9,7 +9,7 @@ public class Data_Test
 
     // Test case for validating first name.
     @Test
-    public void ProvideFirstName_WhenProper_ReturnTrue()
+    public void Provide_FirstName_WhenProper_ReturnTrue()
     {
         boolean result = validate.firstName("Pawan");
         Assert.assertEquals(true, result );
@@ -17,7 +17,7 @@ public class Data_Test
 
     // Test case for validating last name.
     @Test
-    public void ProvideLastName_WhenProper_ReturnTrue()
+    public void Provide_LastName_WhenProper_ReturnTrue()
     {
         boolean result = validate.lastName("Gupta");
         Assert.assertEquals(true, result );
@@ -25,7 +25,7 @@ public class Data_Test
 
     // Test case for validating email Id.
     @Test
-    public void ProvideEmailId_WhenProper_ReturnTrue()
+    public void Provide_EmailId_WhenProper_ReturnTrue()
     {
         boolean result = validate.emailId("Gupta.sagar528@gmail.com");
         Assert.assertEquals(true, result );
@@ -33,9 +33,17 @@ public class Data_Test
 
     // Test case for validating Mobile Number.
     @Test
-    public void ProvidemobileNo_WhenProper_ReturnTrue()
+    public void Provide_mobileNo_WhenProper_ReturnTrue()
     {
         boolean result = validate.mobileNo("91 8411824245");
+        Assert.assertEquals(true, result );
+    }
+
+    // Test case for validating Mobile Number.
+    @Test
+    public void Provide_password8Character_WhenProper_ReturnTrue()
+    {
+        boolean result = validate.password8Character("Qwerty111");
         Assert.assertEquals(true, result );
     }
 }
