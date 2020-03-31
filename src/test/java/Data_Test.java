@@ -30,4 +30,12 @@ public class Data_Test
         boolean result = validate.emailId("Gupta.sagar528@gmail.com");
         Assert.assertEquals(true, result );
     }
+
+    // Test case for validating Mobile Number.
+    @Test
+    public void ProvidemobileNo_WhenProper_ReturnTrue()
+    {
+        boolean result = validate.mobileNo("91 8411824245");
+        Assert.assertEquals(true, result );
+    }
 }
