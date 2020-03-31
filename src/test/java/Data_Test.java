@@ -46,4 +46,12 @@ public class Data_Test
         boolean result = validate.password8Character("Qwerty111");
         Assert.assertEquals(true, result );
     }
+
+    // Test case for validating Mobile Number.
+    @Test
+    public void Provide_passwordMinimumUpperCase_WhenProper_ReturnTrue()
+    {
+        boolean result = validate.passwordMinimumUpperCase("Querida");
+        Assert.assertEquals(true, result );
+    }
 }
