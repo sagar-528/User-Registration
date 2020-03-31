@@ -23,7 +23,8 @@ public class UserValidate
     }
 
     //Method for Email-Id.
-    public boolean emailId(String eId) {
+    public boolean emailId(String eId)
+    {
         String patternemailId = "^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$";
         Pattern p = Pattern.compile(patternemailId);
         Matcher matcher = p.matcher(eId);
@@ -32,7 +33,7 @@ public class UserValidate
 
     //Method for MobileNo.
     public boolean mobileNo(String mNumber) {
-        String patternmobileNo = "^"+COUNTRY_CODE+"[][9876]{1}[0-9]{9}$";
+        String patternmobileNo = "^"+COUNTRY_CODE+"[ ][987]{1}[0-9]{9}$";
         Pattern p = Pattern.compile(patternmobileNo);
         Matcher matcher = p.matcher(mNumber);
         return matcher.matches();
@@ -68,10 +69,29 @@ public class UserValidate
     //Method for Password has 1 special character.
     public boolean password1specialcharacter(String password)
     {
-        String patternpassword1specialcharacter= "^([a-zA-Z0-9]+[+])$";
+        String patternpassword1specialcharacter= "^([a-zA-Z0-9]+[#@?])$";
         Pattern p = Pattern.compile(patternpassword1specialcharacter);
         Matcher matcher = p.matcher(password);
         return matcher.matches();
+    }
+
+    public boolean combineAllRulesPassword(String password)
+    {
+        boolean flag = false;
+        if ( password8Character(password) )
+        {
+            if ( passwordMinimumUpperCase(password) )
+            {
+                if ( passwordAtleast1Numeric(password) )
+                {
+                    if ( password1specialcharacter(password) )
+                    {
+                        flag = true;
+                    }
+                }
+            }
+        }
+        return flag;
     }
 }
 
