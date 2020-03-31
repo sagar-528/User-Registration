@@ -62,4 +62,12 @@ public class Data_Test
         boolean result = validate.passwordAtleast1Numeric("Querida1");
         Assert.assertEquals(true, result );
     }
+
+    // Test case for validating Password has 1 special character.
+    @Test
+    public void Provide_password1specialcharacter_WhenProper_ReturnTrue()
+    {
+        boolean result = validate.password1specialcharacter("Qwer+");
+        Assert.assertEquals(true, result );
+    }
 }

@@ -56,11 +56,20 @@ public class UserValidate
         return matcher.matches();
     }
 
-    //Method for Password as one Numeric number.
+    //Method for Password has one Numeric number.
     public boolean passwordAtleast1Numeric(String password)
     {
         String patternpasswordAtleast1Numeric= ".*[0-9].*";
         Pattern p = Pattern.compile(patternpasswordAtleast1Numeric);
+        Matcher matcher = p.matcher(password);
+        return matcher.matches();
+    }
+
+    //Method for Password has 1 special character.
+    public boolean password1specialcharacter(String password)
+    {
+        String patternpassword1specialcharacter= "^([a-zA-Z0-9]+[+])$";
+        Pattern p = Pattern.compile(patternpassword1specialcharacter);
         Matcher matcher = p.matcher(password);
         return matcher.matches();
     }
