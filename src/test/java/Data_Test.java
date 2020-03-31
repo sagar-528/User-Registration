@@ -39,7 +39,7 @@ public class Data_Test
         Assert.assertEquals(true, result );
     }
 
-    // Test case for validating Mobile Number.
+    // Test case for validating password with 8 character in it.
     @Test
     public void Provide_password8Character_WhenProper_ReturnTrue()
     {
@@ -47,11 +47,19 @@ public class Data_Test
         Assert.assertEquals(true, result );
     }
 
-    // Test case for validating Mobile Number.
+    // Test case for validating Password with Minimum Uppercase Character.
     @Test
     public void Provide_passwordMinimumUpperCase_WhenProper_ReturnTrue()
     {
         boolean result = validate.passwordMinimumUpperCase("Querida");
+        Assert.assertEquals(true, result );
+    }
+
+    // Test case for validating Password with Minimum Uppercase Character.
+    @Test
+    public void Provide_passwordAtleast1Numeric_WhenProper_ReturnTrue()
+    {
+        boolean result = validate.passwordAtleast1Numeric("Querida1");
         Assert.assertEquals(true, result );
     }
 }

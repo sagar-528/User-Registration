@@ -56,5 +56,13 @@ public class UserValidate
         return matcher.matches();
     }
 
+    //Method for Password as one Numeric number.
+    public boolean passwordAtleast1Numeric(String password)
+    {
+        String patternpasswordAtleast1Numeric= ".*[0-9].*";
+        Pattern p = Pattern.compile(patternpasswordAtleast1Numeric);
+        Matcher matcher = p.matcher(password);
+        return matcher.matches();
+    }
 }
 
