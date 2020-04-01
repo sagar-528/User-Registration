@@ -69,7 +69,7 @@ public class UserValidate
     //Method for Password has 1 special character.
     public boolean password1specialcharacter(String password)
     {
-        String patternpassword1specialcharacter= "^([a-zA-Z0-9]+[#@?])$";
+        String patternpassword1specialcharacter= "^([a-zA-Z0-9]*[A-Z]+[a-zA-Z0-9]*[0-9]*[a-zA-Z0-9]*[@#$&]*[a-zA-Z0-9]*)|([a-zA-Z0-9]*[@#$&]*[a-zA-Z0-9]*[A-Z]*[a-zA-Z0-9]*[0-9]+[a-zA-Z0-9]*)|([a-zA-Z0-9]*[0-9]*[a-zA-Z0-9]*[@#$&]+[a-zA-Z0-9]*[A-Z]*[a-zA-Z0-9]*)$";
         Pattern p = Pattern.compile(patternpassword1specialcharacter);
         Matcher matcher = p.matcher(password);
         return matcher.matches();
