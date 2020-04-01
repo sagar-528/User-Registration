@@ -25,7 +25,7 @@ public class UserValidate
     //Method for Email-Id.
     public boolean emailId(String eId)
     {
-        String patternemailId = "^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})$";
+        String patternemailId = "^[a-zA-Z]+([+]?[-]?[.]?[_]?[a-zA-Z0-9]+)?[@]{1}[a-z]+[.]{1}[a-z]{2,}([.]?[a-z]+)?$";
         Pattern p = Pattern.compile(patternemailId);
         Matcher matcher = p.matcher(eId);
         return matcher.matches();
