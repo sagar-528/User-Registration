@@ -27,7 +27,7 @@ public class Data_Test
     @Test
     public void Provide_EmailId_WhenProper_ReturnTrue()
     {
-        boolean result = validate.emailId("Gupta.sagar528@gmail.com");
+        boolean result = validate.emailId("-Gupta.sagar528@gmail.com");
         Assert.assertEquals(true, result );
     }
 
@@ -68,14 +68,6 @@ public class Data_Test
     public void Provide_password1specialcharacter_WhenProper_ReturnTrue()
     {
         boolean result = validate.password1specialcharacter("Qwer@");
-        Assert.assertEquals(true, result );
-    }
-
-    // Combine all test case for Passsword.
-    @Test
-    public void gitProvide_combineAllRulesPassword_WhenProper_ReturnTrue()
-    {
-        boolean result = validate.combineAllRulesPassword("Qwer@123");
         Assert.assertEquals(true, result );
     }
 }
